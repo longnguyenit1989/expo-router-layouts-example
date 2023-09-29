@@ -7,9 +7,13 @@ export default function Page() {
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Hello World</Text>
-        {/* <Link href="/tabs/index" style={styles.subtitle}> */}
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
-        {/* </Link> */}
+
+        <Link href="/tabs" style={styles.subtitle}>
+          <Text style={styles.subtitle}>
+            This is the first page of your app.
+          </Text>
+        </Link>
+        
       </View>
     </View>
   );

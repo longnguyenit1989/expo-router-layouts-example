@@ -10,11 +10,11 @@ export default function Page() {
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Hello World</Text>
+          
           <Link href="/stack" style={styles.subtitle}>
             Back
           </Link>
 
-          {/* <Button onPress={() =>{router.back}} title='Router back'/> */}
         </View>
       </View>
     </ScrollView>
