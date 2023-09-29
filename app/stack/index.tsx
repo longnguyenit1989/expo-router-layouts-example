@@ -1,16 +1,23 @@
-import { Link } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
+
+  const router = useRouter();
+
   return (
-    <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={styles.container}>
+
         <View style={styles.main}>
           <Text style={styles.title}>Stack</Text>
           <Link href="/stack/second" style={styles.subtitle}>
             Next
           </Link>
         </View>
+
+        <Button onPress={() => {router.push('/stack/second')}} title = 'Push Second'/>
+
       </View>
     </ScrollView>
   );
@@ -18,6 +25,7 @@ export default function Page() {
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection:'column',
     flex: 1,
     alignItems: "center",
     padding: 24,

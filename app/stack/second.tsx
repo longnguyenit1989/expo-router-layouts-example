@@ -1,7 +1,10 @@
-import { Link } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
+
+  // const router = useRouter();
+
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -10,6 +13,8 @@ export default function Page() {
           <Link href="/stack" style={styles.subtitle}>
             Back
           </Link>
+
+          {/* <Button onPress={() =>{router.back}} title='Router back'/> */}
         </View>
       </View>
     </ScrollView>
